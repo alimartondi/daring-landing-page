@@ -1,15 +1,17 @@
 import React from "react";
-import ApplicationImage from "../../images/application.png";
+import SystemImage from "../../images/system.png";
 
-export default function Application() {
+export default function System() {
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-12 mt-24 md:mt-40 items-center">
       <div>
-        <img src={ApplicationImage} alt="System PNG" />
+        <img src={SystemImage} alt="System PNG" />
       </div>
-      <div className="application-content md:pr-24">
-        <p className="text-indigo-900 font-semibold text-base">Application</p>
-        <h2 className="text-4xl font-bold">Download Moriba Your Phone</h2>
+      <div className="System-content md:pr-24">
+        <p className="text-indigo-900 font-semibold text-base">System</p>
+        <h2 className="text-4xl md:text-5xl font-bold">
+          Smart System & Friendly Interface
+        </h2>
         <p className="mt-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias fugit
           assumenda quisquam cumque qui officiis. Reiciendis magni sapiente,

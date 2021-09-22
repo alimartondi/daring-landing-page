@@ -1,17 +1,14 @@
 import Hero from "./components/sections/hero";
 import Navbar from "./components/elements/navbar";
-import Advantages from "./components/sections/advantages";
+import Feauture from "./components/sections/feauture";
 import Application from "./components/sections/application";
+import Main from "./components/elements/main";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Hero />
-      <div className="container-lg px-4">
-        <Advantages />
-        {/* <Application /> */}
-      </div>
+      <Main />
     </div>
   );
 }
