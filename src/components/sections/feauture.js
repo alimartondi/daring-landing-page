@@ -7,7 +7,10 @@ import {
 
 export default function Feauture() {
   return (
-    <div className="advantes text-center text-black-200 mt-24 md:mt-40">
+    <div
+      className="feauture advantes text-center text-black-200 mt-24 md:mt-40"
+      id="feauture"
+    >
       <h6 className="text-indigo-900 font-semibold text-base">Feauture</h6>
       <h2 className="font-bold text-4xl md:text-5xl text-gray-900">
         Our Special Feauture
@@ -15,16 +18,16 @@ export default function Feauture() {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8 mt-12 md:mt-20 justify-center">
         {feautureData.map((content, i) => (
           <div
-            className="w-full py-8 px-4 md:px-10 md:pb-10 font-semibold bg-white rounded-lg"
+            className="w-full py-12 px-10 md:pb-10 font-semibold bg-white rounded-lg hover:shadow"
             key={i}
           >
-            <div className="flex w-16 h-16 md:w-20 md:h-20 md:-mt-16 rounded-xl text-white mx-auto bg-indigo-900 items-center justify-center">
-              <div className="h-8 w-8">{content.icon}</div>
+            <div className="flex w-20 h-20 md:w-20 md:h-20 md:-mt-16 rounded-xl text-white mx-auto bg-indigo-900 items-center justify-center">
+              <div className="h-10 w-10">{content.icon}</div>
             </div>
             <h4 className="font-bold text-gray-900 text-xl mt-8">
               {content.title}
             </h4>
-            <p className="mt-3 text-lg font-normal text-gray-600">
+            <p className="mt-3 text-md font-normal text-gray-800">
               {content.description}
             </p>
           </div>

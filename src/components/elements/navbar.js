@@ -1,40 +1,100 @@
 import React, { useState, useEffect } from "react";
-import Burger from "react-css-burger";
 import Logo from "../../images/logo.svg";
+import { Link, animateScroll as scroll } from "react-scroll";
+import { Fade as Hamburger } from "hamburger-react";
 
 export default function Navbar() {
-  const [state, setState] = useState({
-    active: false,
-  });
-  const genericHamburgerLine = `h-0.5 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
+  // const [state, setState] = useState({
+  //   active: false,
+  // });
+  const [isOpen, setOpen] = useState(false);
+  // const genericHamburgerLine = `h-0.5 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
 
   const isOnTop = useScrollHandler();
 
-  // const scrollToTop = () => {
-  //   animateScroll.scrollToTop();
-  // };
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
-  const open = () => setState(!open);
+  // const open = () => setState(!open);
 
   return (
     <nav
       className={` ${
-        isOnTop ? "bg-transparent" : "shadow-md bg-white"
-      } fixed flex items-center justify-between px-2 py-4 md:py-6 w-full transition duration-150 ease-in-out`}
+        isOnTop
+          ? "bg-transparent transition duration-300 ease-in-out"
+          : "bg-white shadow"
+      } fixed w-full `}
     >
-      <div className="container mx-auto px-2 md:px-16 flex flex-wrap items-center justify-between">
-        <img src={Logo} className="max-h-6 md:max-h-full" alt="moriba-logo" />
-        {/* <div className="nav-items absolute top-0 left-0 p-4 font-medium text-white   bg-pink-500 w-full h-screen z-0">
-          <ul className="flex flex-col h-52 justify-between">
-            <li>Home</li>
-            <li>Advantages</li>
-            <li>About Us</li>
-            <li>Application</li>
-            <li>Contact Us</li>
-          </ul>
+      <div className="container mx-auto px-1.5 py-1.5 md:px-16 flex items-center justify-between">
+        <div className="nav-items w-full flex justify-between items-center z-50">
+          <img
+            src={Logo}
+            className="flex-none max-h-6 md:max-h-full cursor-pointer px-2"
+            alt="moriba-logo"
+            onClick={scrollToTop}
+          />
+          <Hamburger size={28} toggled={isOpen} toggle={setOpen} />
+        </div>
+        <div
+          className={`${
+            isOpen ? "block" : "hidden"
+          } absolute top-0 pt-20 w-full h-screen bg-white flex flex-col font-semibold text-2xl space-y-4 px-4 transition duration-500 ease-in-out text-gray-900`}
+        >
+          <hr className="w-full bg-gray-500" />
+          <Link
+            activeClass="active"
+            to="feauture"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="active:text-red-900 cursor-pointer hover:text-indigo-900"
+          >
+            Feauture
+          </Link>
+          <Link
+            activeClass="active"
+            to="system"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="active:text-red-900 cursor-pointer hover:text-indigo-900"
+          >
+            About Us
+          </Link>
+          <Link
+            activeClass="active"
+            to="board"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="active:text-red-900 cursor-pointer hover:text-indigo-900"
+          >
+            Contact
+          </Link>
+          <Link
+            activeClass="active"
+            to="application"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="active:text-red-900 cursor-pointer hover:text-indigo-900"
+          >
+            Application
+          </Link>
+        </div>
+        {/* <div className="yeah">
+          <button className="bg-transparent py-2 px-8 rounded-lg text-gray-900 font-medium mr-2">
+            Sign Up
+          </button>
+          <button className="bg-red-500 py-2 px-8 rounded-lg text-white font-normal hover:bg-red-600">
+            Sign In
+          </button>
         </div> */}
-        <button className="h-4 w-4"></button>
-        <genericHamburgerLine />
       </div>
     </nav>
   );

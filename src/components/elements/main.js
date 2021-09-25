@@ -9,7 +9,7 @@ import Space from "../sections/space";
 export default function Main() {
   return (
     <div>
-      <div className="container mx-auto px-3 lg:px-16">
+      <div className="container mx-auto px-4 lg:px-16">
         <Hero />
         <Feauture />
         <System />

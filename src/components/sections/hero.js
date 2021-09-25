@@ -18,7 +18,7 @@ export default function Hero() {
           </button>
         </div>
         <div className="mt-24 px-2 md:pl-10">
-          <img src={HeroImage} alt="Hero Image" />
+          <img src={HeroImage} alt="Hero" />
         </div>
       </div>
     </div>

@@ -3,7 +3,10 @@ import SystemImage from "../../images/system.png";
 
 export default function System() {
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-12 mt-24 md:mt-40 items-center">
+    <div
+      className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-12 mt-24 md:mt-40 items-center"
+      id="system"
+    >
       <div>
         <img src={SystemImage} alt="System PNG" />
       </div>
