@@ -1,5 +1,7 @@
 import React from "react";
 import ApplicationImage from "../../images/application.png";
+import Playstore from "../../images/playstore.svg";
+import Appstore from "../../images/appstore.svg";
 
 export default function Application() {
   return (
@@ -10,14 +12,26 @@ export default function Application() {
       <div>
         <img src={ApplicationImage} alt="System PNG" />
       </div>
-      <div className="application-content md:pr-24">
+      <div className="application-content lg:pr-24">
         <p className="text-indigo-900 font-semibold text-base">Application</p>
-        <h2 className="text-4xl font-bold">Download Moriba Your Phone</h2>
+        <h2 className="text-4xl xl:text-5xl font-bold">
+          Download Moriba App On Your Phone
+        </h2>
         <p className="mt-5">
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form, by injected
           humour, or randomised words which don't look even slightly believable.
         </p>
+        <div className="mt-8 flex">
+          <button className="text-white bg-indigo-900 rounded-lg flex px-8 py-4 mr-2">
+            <img src={Playstore} alt="Playstore Badge" className="mr-2" />
+            Play store
+          </button>
+          <button className="text-white bg-indigo-900 rounded-lg flex px-8 py-4">
+            <img src={Appstore} alt="Appstore Badge" className="mr-2" />
+            App store
+          </button>
+        </div>
       </div>
     </div>
   );

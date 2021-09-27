@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.2.0",
+    "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.4",
     "@tailwindcss/forms": "^0.3.3",
     "@testing-library/jest-dom": "^5.14.1",
@@ -12,6 +13,8 @@
     "hamburger-react": "^2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hamburger-button": "0.0.1",
+    "react-hamburger-menu": "^1.2.1",
     "react-icons": "^4.2.0",
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.4",

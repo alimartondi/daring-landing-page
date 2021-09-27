@@ -7,12 +7,12 @@ export default function System() {
       className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-12 mt-24 md:mt-40 items-center"
       id="system"
     >
-      <div>
+      <div className="order-last md:order-first">
         <img src={SystemImage} alt="System PNG" />
       </div>
-      <div className="System-content md:pr-24">
+      <div className="System-content lg:pr-24">
         <p className="text-indigo-900 font-semibold text-base">System</p>
-        <h2 className="text-4xl md:text-5xl font-bold">
+        <h2 className="text-4xl xl:text-5xl font-bold">
           Smart System & Friendly Interface
         </h2>
         <p className="mt-5">

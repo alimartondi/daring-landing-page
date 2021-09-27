@@ -4,9 +4,9 @@ import SpaceImage from "../../images/space.png";
 export default function Space() {
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-12 mt-24 md:mt-40 items-center">
-      <div className="order-last md:order-first md:pr-24">
+      <div className="order-last lg:order-first lg:pr-24">
         <p className="text-indigo-900 font-semibold text-base">One space</p>
-        <h2 className="text-4xl md:text-5xl font-bold">
+        <h2 className="text-4xl xl:text-5xl font-bold">
           Work Better in One Shared Space
         </h2>
         <p className="mt-5">

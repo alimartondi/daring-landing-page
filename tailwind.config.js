@@ -5,7 +5,9 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      textColor: ["active"],
+    },
   },
   plugins: [require("@tailwindcss/forms")],
 };

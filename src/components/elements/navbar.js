@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../../images/logo.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
-import { Fade as Hamburger } from "hamburger-react";
 
 export default function Navbar() {
-  // const [state, setState] = useState({
-  //   active: false,
-  // });
-  const [isOpen, setOpen] = useState(false);
-  // const genericHamburgerLine = `h-0.5 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
+  const [state, setState] = useState({
+    active: false,
+  });
 
   const isOnTop = useScrollHandler();
 
@@ -16,7 +13,7 @@ export default function Navbar() {
     scroll.scrollToTop();
   };
 
-  // const open = () => setState(!open);
+  const open = () => setState(!open);
 
   return (
     <nav
@@ -26,22 +23,47 @@ export default function Navbar() {
           : "bg-white shadow"
       } fixed w-full `}
     >
-      <div className="container mx-auto px-1.5 py-1.5 md:px-16 flex items-center justify-between">
-        <div className="nav-items w-full flex justify-between items-center z-50">
+      <div className="container mx-auto px-1.5 py-3 lg:py-4 px-4 lg:px-14 flex lg:flex-row items-center justify-between">
+        <div className="brand z-50">
           <img
             src={Logo}
             className="flex-none max-h-6 md:max-h-full cursor-pointer px-2"
             alt="moriba-logo"
             onClick={scrollToTop}
           />
-          <Hamburger size={28} toggled={isOpen} toggle={setOpen} />
         </div>
+        <button
+          className="text-gray-500 w-10 h-10 relative focus:outline-none bg-transparent z-50 lg:hidden"
+          onClick={() => setState({ active: !state.active })}
+        >
+          <span class="sr-only">Open main menu</span>
+          <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+            <span
+              aria-hidden="true"
+              className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${
+                state.active ? "rotate-45" : "-translate-y-1.5"
+              }`}
+            ></span>
+            <span
+              aria-hidden="true"
+              className={`block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out ${
+                state.active ? "opacity-0" : ""
+              }`}
+            ></span>
+            <span
+              aria-hidden="true"
+              className={`block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out ${
+                state.active ? "-rotate-45" : "translate-y-1.5"
+              }`}
+            ></span>
+          </div>
+        </button>
         <div
           className={`${
-            isOpen ? "block" : "hidden"
-          } absolute top-0 pt-20 w-full h-screen bg-white flex flex-col font-semibold text-2xl space-y-4 px-4 transition duration-500 ease-in-out text-gray-900`}
+            state.active ? "block" : "hidden"
+          } absolute lg:relative flex flex-col lg:flex lg:flex-row lg:justify-between lg:items-center top-0 left-0 pt-16 lg:pt-0 h-screen lg:h-auto w-full lg:w-9/12 xl:w-3/6 bg-white lg:bg-transparent font-semibold lg:font-medium text-xl lg:text-base space-y-4 lg:space-y-0 px-4 lg:px-0 text-gray-900`}
         >
-          <hr className="w-full bg-gray-500" />
+          <hr className="w-full bg-gray-500 lg:hidden" />
           <Link
             activeClass="active"
             to="feauture"
@@ -49,7 +71,8 @@ export default function Navbar() {
             smooth={true}
             offset={-70}
             duration={500}
-            className="active:text-red-900 cursor-pointer hover:text-indigo-900"
+            className="active:text-indigo-900 cursor-pointer hover:text-indigo-900"
+            onClick={open}
           >
             Feauture
           </Link>
@@ -60,7 +83,8 @@ export default function Navbar() {
             smooth={true}
             offset={-70}
             duration={500}
-            className="active:text-red-900 cursor-pointer hover:text-indigo-900"
+            className="active:text-indigo-900 cursor-pointer hover:text-indigo-900"
+            onClick={open}
           >
             About Us
           </Link>
@@ -71,7 +95,8 @@ export default function Navbar() {
             smooth={true}
             offset={-70}
             duration={500}
-            className="active:text-red-900 cursor-pointer hover:text-indigo-900"
+            className="active:text-indigo-900 cursor-pointer hover:text-indigo-900"
+            onClick={open}
           >
             Contact
           </Link>
@@ -82,19 +107,15 @@ export default function Navbar() {
             smooth={true}
             offset={-70}
             duration={500}
-            className="active:text-red-900 cursor-pointer hover:text-indigo-900"
+            className="active:text-indigo-900 cursor-pointer hover:text-indigo-900"
+            onClick={open}
           >
             Application
           </Link>
+          <button className="w-full lg:w-auto lg:px-5 bg-red-500 rounded-lg py-2 font-medium text-white text-base">
+            Sign up
+          </button>
         </div>
-        {/* <div className="yeah">
-          <button className="bg-transparent py-2 px-8 rounded-lg text-gray-900 font-medium mr-2">
-            Sign Up
-          </button>
-          <button className="bg-red-500 py-2 px-8 rounded-lg text-white font-normal hover:bg-red-600">
-            Sign In
-          </button>
-        </div> */}
       </div>
     </nav>
   );

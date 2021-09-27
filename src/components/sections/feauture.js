@@ -1,8 +1,8 @@
 import React from "react";
 import {
-  DocumentDuplicateIcon,
-  DesktopComputerIcon,
-  CalendarIcon,
+  UserGroupIcon,
+  ClipboardCheckIcon,
+  ViewGridAddIcon,
 } from "@heroicons/react/solid";
 
 export default function Feauture() {
@@ -12,13 +12,13 @@ export default function Feauture() {
       id="feauture"
     >
       <h6 className="text-indigo-900 font-semibold text-base">Feauture</h6>
-      <h2 className="font-bold text-4xl md:text-5xl text-gray-900">
+      <h2 className="font-bold text-4xl xl:text-5xl text-gray-900">
         Our Special Feauture
       </h2>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8 mt-12 md:mt-20 justify-center">
         {feautureData.map((content, i) => (
           <div
-            className="w-full py-12 px-10 md:pb-10 font-semibold bg-white rounded-lg hover:shadow"
+            className="w-full py-12 px-10 md:pb-10 font-semibold bg-white rounded-lg hover:shadow-md"
             key={i}
           >
             <div className="flex w-20 h-20 md:w-20 md:h-20 md:-mt-16 rounded-xl text-white mx-auto bg-indigo-900 items-center justify-center">
@@ -27,7 +27,7 @@ export default function Feauture() {
             <h4 className="font-bold text-gray-900 text-xl mt-8">
               {content.title}
             </h4>
-            <p className="mt-3 text-md font-normal text-gray-800">
+            <p className="mt-3 lg:mt-8 text-md font-normal text-gray-800">
               {content.description}
             </p>
           </div>
@@ -39,21 +39,21 @@ export default function Feauture() {
 
 const feautureData = [
   {
-    icon: <DocumentDuplicateIcon />,
-    title: "User Friendly",
+    icon: <UserGroupIcon />,
+    title: "Collaborative",
     description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC",
+      "Give your teams an intelligent way to openly discuss work and keep conversations organized and accessible.",
   },
   {
-    icon: <DesktopComputerIcon />,
+    icon: <ClipboardCheckIcon />,
     title: "Flexibility",
     description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "Coordinate better on core projects with highly visual and intuitive tools to keep your team on track.",
   },
   {
-    icon: <CalendarIcon />,
-    title: "Trusted App",
+    icon: <ViewGridAddIcon />,
+    title: "Customizable",
     description:
-      "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarr-assing hidden in the middle.",
+      "Control every aspect of Kissflow to make it work for you and your team.",
   },
 ];
