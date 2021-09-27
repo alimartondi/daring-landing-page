@@ -9,5 +9,4 @@ module.exports = {
       textColor: ["active"],
     },
   },
-  plugins: [require("@tailwindcss/forms")],
 };
