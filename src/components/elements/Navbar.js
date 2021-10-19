@@ -23,11 +23,11 @@ export default function Navbar() {
           : "bg-white shadow"
       } fixed w-full `}
     >
-      <div className="container mx-auto px-1.5 py-3 lg:py-4 px-4 lg:px-14 flex lg:flex-row items-center justify-between">
+      <div className="container mx-auto px-1.5 py-3 lg:py-4 px-4 lg:px-16 flex lg:flex-row items-center justify-between">
         <div className="brand z-50">
           <img
             src={Logo}
-            className="flex-none max-h-6 md:max-h-full cursor-pointer px-2"
+            className="flex-none max-h-6 md:max-h-full cursor-pointer px-2 lg:px-0"
             alt="moriba-logo"
             onClick={scrollToTop}
           />
@@ -36,8 +36,8 @@ export default function Navbar() {
           className="text-gray-500 w-10 h-10 relative focus:outline-none bg-transparent z-50 lg:hidden"
           onClick={() => setState({ active: !state.active })}
         >
-          <span class="sr-only">Open main menu</span>
-          <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+          <span className="sr-only">Open main menu</span>
+          <div className="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
             <span
               aria-hidden="true"
               className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${
@@ -66,22 +66,22 @@ export default function Navbar() {
           <hr className="w-full bg-gray-500 lg:hidden" />
           <Link
             activeClass="active"
-            to="feauture"
+            to="feature"
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-100}
             duration={500}
             className="active:text-indigo-900 cursor-pointer hover:text-indigo-900"
             onClick={open}
           >
-            Feauture
+            Feature
           </Link>
           <Link
             activeClass="active"
             to="system"
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-150}
             duration={500}
             className="active:text-indigo-900 cursor-pointer hover:text-indigo-900"
             onClick={open}
@@ -93,7 +93,7 @@ export default function Navbar() {
             to="board"
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-120}
             duration={500}
             className="active:text-indigo-900 cursor-pointer hover:text-indigo-900"
             onClick={open}
@@ -112,7 +112,7 @@ export default function Navbar() {
           >
             Application
           </Link>
-          <button className="w-full lg:w-auto lg:px-5 bg-red-500 rounded-lg py-2 font-medium text-white text-base">
+          <button className="w-full lg:w-auto lg:px-5 bg-red-500 rounded-lg py-2.5 font-medium text-white text-base">
             Sign up
           </button>
         </div>

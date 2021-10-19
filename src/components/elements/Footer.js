@@ -1,11 +1,16 @@
 import React from "react";
 import Logo from "../../images/logo.svg";
-import { FaFacebookSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+  FaFacebookSquare,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
     <div className="footer" id="footer">
-      <div className="container lg:py-20 pb-10 pt-20 px-4 lg:px-16 mx-auto">
+      <div className="container lg:pt-20 pb-10 pt-20 px-4 lg:px-16 mx-auto">
         <hr className="bg-gray-700 w-full mb-12" />
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="col-span-2">
@@ -50,7 +55,7 @@ export default function Footer() {
           <div className="hidden md:block">
             <p className="font-medium mb-5">Get in touch</p>
             <div className="social">
-              <ul className="flex w-24 justify-between text-gray-900">
+              <ul className="flex w-32 justify-between text-gray-900">
                 <li className="cursor-pointer hover:text-indigo-900 text-3xl">
                   <FaFacebookSquare />
                 </li>
@@ -59,6 +64,9 @@ export default function Footer() {
                 </li>
                 <li className="cursor-pointer hover:text-indigo-900 text-3xl">
                   <FaInstagram />
+                </li>
+                <li className="cursor-pointer hover:text-indigo-900 text-3xl">
+                  <FaTwitter />
                 </li>
               </ul>
             </div>
