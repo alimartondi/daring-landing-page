@@ -90,6 +90,18 @@ export default function Navbar() {
           </Link>
           <Link
             activeClass="active"
+            to="space"
+            spy={true}
+            smooth={true}
+            offset={-150}
+            duration={500}
+            className="active:text-indigo-900 cursor-pointer hover:text-indigo-900"
+            onClick={open}
+          >
+            Advantage
+          </Link>
+          <Link
+            activeClass="active"
             to="board"
             spy={true}
             smooth={true}

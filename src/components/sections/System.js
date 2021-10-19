@@ -11,7 +11,7 @@ export default function System() {
         <img src={SystemImage} alt="System PNG" />
       </div>
       <div className="System-content lg:pr-24">
-        <p className="text-indigo-900 font-semibold text-base">System</p>
+        <p className="text-indigo-900 font-semibold text-base mb-2">System</p>
         <h2 className="text-4xl xl:text-5xl font-extrabold text-gray-800">
           Smart system & friendly interface
         </h2>
@@ -21,6 +21,9 @@ export default function System() {
           using Lorem Ipsum is that it has a more-or-less normal distribution of
           letters.
         </p>
+        <button className="bg-indigo-900 text-white rounded-lg px-8 py-3.5 md:py-4 mt-8 font-medium w-3/6 md:w-auto">
+          Read More
+        </button>
       </div>
     </div>
   );

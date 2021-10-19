@@ -13,7 +13,9 @@ export default function Application() {
         <img src={ApplicationImage} alt="System PNG" />
       </div>
       <div className="application-content lg:pr-24 mt-10 lg:mt-0">
-        <p className="text-indigo-900 font-semibold text-base">Application</p>
+        <p className="text-indigo-900 font-semibold text-base mb-2">
+          Application
+        </p>
         <h2 className="text-4xl xl:text-5xl font-extrabold text-gray-800">
           Download Moriba on your phone
         </h2>
